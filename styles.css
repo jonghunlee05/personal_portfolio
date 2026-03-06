@@ -1,0 +1,135 @@
+/* B급 싸구려 - 최소한의 스타일만 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.5;
+  background: #ffffcc;
+}
+
+.site-header {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 2px solid black;
+  margin: 0;
+  background: #ffcc00;
+}
+
+.header-decoration {
+  margin: 0;
+  font-size: 1rem;
+  color: red;
+}
+
+.site-title {
+  margin: 0.2rem 0;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: red;
+}
+
+.site-subtitle {
+  margin: 0.3rem 0 0;
+  font-size: 1rem;
+  color: black;
+}
+
+.main-stage {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 1rem;
+  padding: 1.5rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.aside-left,
+.aside-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.callout-box {
+  padding: 0.8rem;
+  border: 2px solid black;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.aside-left .callout-box {
+  background: #ff99cc;
+}
+
+.aside-right .callout-box {
+  background: #99ff99;
+}
+
+.main-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.visual-placeholder {
+  width: 100%;
+  min-height: 200px;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ccccff;
+}
+
+.info-bar {
+  padding: 1rem;
+  border-top: 2px solid black;
+  max-width: 700px;
+  margin: 0 auto;
+  background: white;
+}
+
+.intro-text {
+  margin: 0 0 0.8rem;
+  max-width: 50ch;
+}
+
+.info-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.info-links a {
+  color: blue;
+  text-decoration: underline;
+}
+
+.info-links a:hover {
+  color: red;
+}
+
+.site-footer {
+  padding: 0.8rem;
+  text-align: center;
+  border-top: 2px solid black;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  background: #cccccc;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .main-stage {
+    grid-template-columns: 1fr;
+  }
+}
