@@ -1,5 +1,7 @@
-/* B급 싸구려 - 최소한의 스타일만 */
-* {
+/* B급 싸구려 — cheap & shitty design (same structure, loud styling) */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -7,129 +9,295 @@ body {
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
   line-height: 1.5;
+  color: #000;
   background: #ffffcc;
 }
 
+/* ---------------------------------------- */
+/* SITE HEADER + NAV                        */
+/* ---------------------------------------- */
 .site-header {
-  padding: 1rem;
-  text-align: center;
-  border-bottom: 2px solid black;
-  margin: 0;
+  padding: 1rem 1.5rem;
+  border: 4px solid #000;
+  margin: 1rem;
   background: #ffcc00;
+  text-align: center;
 }
 
 .header-decoration {
   margin: 0;
   font-size: 1rem;
   color: red;
+  letter-spacing: 0.2em;
 }
 
-.site-title {
-  margin: 0.2rem 0;
-  font-size: 2.2rem;
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.main-nav a {
+  color: #000;
+  text-decoration: underline;
   font-weight: bold;
+}
+
+.main-nav a:hover {
   color: red;
 }
 
-.site-subtitle {
-  margin: 0.3rem 0 0;
-  font-size: 1rem;
-  color: black;
-}
-
-.main-stage {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  gap: 1rem;
-  padding: 1.5rem 1rem;
-  max-width: 900px;
+/* ---------------------------------------- */
+/* PAGE SECTIONS (shared)                   */
+/* ---------------------------------------- */
+.page-section {
+  max-width: 720px;
   margin: 0 auto;
+  padding: 2rem 1.5rem;
 }
 
-.aside-left,
-.aside-right {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+.section-heading {
+  margin: 0 0 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: red;
 }
 
-.callout-box {
-  padding: 0.8rem;
-  border: 2px solid black;
-  min-height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.aside-left .callout-box {
-  background: #ff99cc;
-}
-
-.aside-right .callout-box {
-  background: #99ff99;
-}
-
-.main-visual {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.visual-placeholder {
-  width: 100%;
-  min-height: 200px;
-  border: 2px solid black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #ccccff;
-}
-
-.info-bar {
+/* ---------------------------------------- */
+/* HOME — blocks                            */
+/* ---------------------------------------- */
+.section-home .block {
+  margin-bottom: 2rem;
   padding: 1rem;
-  border-top: 2px solid black;
-  max-width: 700px;
-  margin: 0 auto;
-  background: white;
+  border: 3px solid #000;
+  background: #fff;
 }
 
-.intro-text {
-  margin: 0 0 0.8rem;
-  max-width: 50ch;
+.block-title {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: red;
 }
 
-.info-links {
+.hero-block {
+  padding: 1rem;
+  background: #ffeb3b;
+  border: 3px solid #000;
+}
+
+.hero-name {
+  margin: 0 0 0.25rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: red;
+}
+
+.hero-tagline {
+  margin: 0;
+  font-size: 1rem;
+  color: #000;
+}
+
+.intro-block .intro-text {
+  margin: 0;
+  max-width: 65ch;
+}
+
+.achievements-list {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.achievement-item {
+  margin-bottom: 0.5rem;
+}
+
+.quick-links {
   display: flex;
-  gap: 1rem;
   flex-wrap: wrap;
+  gap: 1rem;
 }
 
-.info-links a {
+.quick-links a {
   color: blue;
   text-decoration: underline;
 }
 
-.info-links a:hover {
+.quick-links a:hover {
   color: red;
 }
 
+/* ---------------------------------------- */
+/* PROJECTS — project cards (cheap boxes)   */
+/* ---------------------------------------- */
+.section-projects {
+  border-top: 4px solid #000;
+  background: #fff;
+}
+
+.project-card {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 3px solid #000;
+  background: #ff99cc;
+}
+
+.project-card:nth-child(3) {
+  background: #99ff99;
+}
+
+.project-title {
+  margin: 0 0 0.25rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.project-summary {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  color: #000;
+}
+
+.project-details {
+  margin: 0 0 1rem;
+  font-size: 0.9375rem;
+}
+
+.project-details dt {
+  margin-top: 0.5rem;
+  font-weight: 700;
+}
+
+.project-details dt:first-child {
+  margin-top: 0;
+}
+
+.project-details dd {
+  margin: 0.15rem 0 0;
+  padding-left: 0;
+}
+
+.project-link {
+  color: blue;
+  text-decoration: underline;
+}
+
+.project-link:hover {
+  color: red;
+}
+
+/* ---------------------------------------- */
+/* EXPERIENCE — experience entries          */
+/* ---------------------------------------- */
+.section-experience {
+  border-top: 4px solid #000;
+  background: #fff;
+}
+
+.experience-entry {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 3px solid #000;
+  background: #ccccff;
+}
+
+.experience-entry:nth-child(4) {
+  background: #ffecb3;
+}
+
+.experience-header {
+  margin-bottom: 0.75rem;
+}
+
+.experience-role {
+  margin: 0 0 0.15rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.experience-org,
+.experience-date {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: #000;
+}
+
+.experience-description {
+  margin: 0 0 0.75rem;
+  font-size: 0.9375rem;
+  max-width: 65ch;
+}
+
+.experience-impact {
+  margin: 0;
+  padding-left: 1.25rem;
+  font-size: 0.9375rem;
+}
+
+.experience-impact li {
+  margin-bottom: 0.35rem;
+}
+
+/* ---------------------------------------- */
+/* CONTACT                                  */
+/* ---------------------------------------- */
+.section-contact {
+  border-top: 4px solid #000;
+  background: #fff;
+}
+
+.contact-block {
+  padding: 1rem;
+  border: 3px solid #000;
+  background: #b2dfdb;
+  font-size: 0.9375rem;
+}
+
+.contact-item {
+  margin: 0 0 0.5rem;
+}
+
+.contact-item a {
+  color: blue;
+  text-decoration: underline;
+}
+
+.contact-item a:hover {
+  color: red;
+}
+
+/* ---------------------------------------- */
+/* FOOTER                                   */
+/* ---------------------------------------- */
 .site-footer {
-  padding: 0.8rem;
-  text-align: center;
-  border-top: 2px solid black;
-  margin-top: 1rem;
-  font-size: 0.85rem;
+  padding: 1rem 1.5rem;
+  border-top: 4px solid #000;
+  margin: 1rem 0 0;
+  font-size: 0.875rem;
   background: #cccccc;
+  color: #000;
+  text-align: center;
+  font-weight: bold;
 }
 
 .site-footer p {
   margin: 0;
 }
 
+/* ---------------------------------------- */
+/* RESPONSIVE                               */
+/* ---------------------------------------- */
 @media (max-width: 600px) {
-  .main-stage {
-    grid-template-columns: 1fr;
+  .page-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .hero-name {
+    font-size: 1.5rem;
   }
 }

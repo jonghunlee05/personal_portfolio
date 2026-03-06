@@ -7,48 +7,170 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- ========== HEADER: Site title and subtitle ========== -->
+  <!-- ============================================================ -->
+  <!-- SITE HEADER + NAVIGATION (shared across sections)            -->
+  <!-- Easy to add stickers, badges, or odd labels here later.       -->
+  <!-- ============================================================ -->
   <header class="site-header">
     <p class="header-decoration">★ ★ ★ ★ ★</p>
-    <h1 class="site-title">Site Title</h1>
-    <p class="site-subtitle">Subtitle goes here</p>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#home">HOME</a>
+      <a href="#projects">PROJECTS</a>
+      <a href="#experience">EXPERIENCE</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
     <p class="header-decoration">◆ ◆ ◆</p>
   </header>
 
-  <!-- ========== MAIN STAGE: 3-column layout ========== -->
-  <main class="main-stage">
-    <!-- Left aside: small callout boxes go here later -->
-    <aside class="aside-left">
-      <div class="callout-box">Left Callout</div>
-    </aside>
+  <main>
+    <!-- ============================================================ -->
+    <!-- HOME SECTION                                                 -->
+    <!-- Goal: first impression = odd/simple; second = real substance  -->
+    <!-- ============================================================ -->
+    <section id="home" class="page-section section-home">
+      <!-- Hero: name + one-line tagline (signals "don't judge by cover") -->
+      <div class="block hero-block">
+        <h1 class="hero-name">Jonghun Lee</h1>
+        <p class="hero-tagline">Don't judge the book by its cover.</p>
+      </div>
 
-    <!-- Center: main visual (image, character, hero content) -->
-    <section class="main-visual">
-      <div class="visual-placeholder">Main Character</div>
+      <!-- Intro: direct, no fluff — shows you're serious -->
+      <div class="block intro-block">
+        <h2 class="block-title">Intro</h2>
+        <p class="intro-text">
+          I build things that ship. I care about clarity, impact, and getting results—whether that's code in production, a team unblocked, or a problem simplified. I like to keep the surface simple and the substance strong.
+        </p>
+      </div>
+
+      <!-- Highlighted achievements: concrete, one line each — prove substance in 3 seconds -->
+      <div class="block achievements-block">
+        <h2 class="block-title">Highlighted achievements</h2>
+        <ul class="achievements-list">
+          <li class="achievement-item">Replace with your real achievement (e.g. Shipped X used by Y users; Won Z hackathon).</li>
+          <li class="achievement-item">Replace with a second (e.g. Led N people; reduced latency by X%).</li>
+          <li class="achievement-item">Replace with a third (e.g. Built Z now in production for 3 teams).</li>
+        </ul>
+      </div>
+
+      <!-- Quick links to other sections -->
+      <div class="block quick-links-block">
+        <h2 class="block-title">Quick links</h2>
+        <nav class="quick-links" aria-label="Section shortcuts">
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
     </section>
 
-    <!-- Right aside: small callout boxes go here later -->
-    <aside class="aside-right">
-      <div class="callout-box">Right Callout</div>
-    </aside>
+    <!-- ============================================================ -->
+    <!-- PROJECTS SECTION                                             -->
+    <!-- Reusable project card layout. Easy to add badges/stickers.   -->
+    <!-- ============================================================ -->
+    <section id="projects" class="page-section section-projects">
+      <h2 class="section-heading">Projects</h2>
+
+      <!-- Reusable project card: copy this block to add more projects. Fill with real projects; use outcome language. -->
+      <article class="project-card">
+        <h3 class="project-title">Replace with real project title</h3>
+        <p class="project-summary">One-sentence summary: what it does and why it matters.</p>
+        <dl class="project-details">
+          <dt>Problem</dt>
+          <dd>What problem or need this addressed. Keep short.</dd>
+          <dt>What I built</dt>
+          <dd>What you built or delivered. Be specific.</dd>
+          <dt>Result</dt>
+          <dd>Outcome or impact (e.g. cut build time by 40%; used by N teams).</dd>
+          <dt>Tools used</dt>
+          <dd>Tech or tools, comma-separated.</dd>
+        </dl>
+        <p class="project-links">
+          <a href="https://github.com/jonghunlee05/personal_portfolio" class="project-link">Repo</a>
+          <a href="#" class="project-link">Live</a>
+        </p>
+      </article>
+
+      <!-- Second project card: same structure. Add more by copying this block. -->
+      <article class="project-card">
+        <h3 class="project-title">Replace with second project title</h3>
+        <p class="project-summary">One-sentence summary.</p>
+        <dl class="project-details">
+          <dt>Problem</dt>
+          <dd>Problem this addressed.</dd>
+          <dt>What I built</dt>
+          <dd>What you built.</dd>
+          <dt>Result</dt>
+          <dd>Measurable or concrete outcome.</dd>
+          <dt>Tools used</dt>
+          <dd>Tools, comma-separated.</dd>
+        </dl>
+        <p class="project-links">
+          <a href="#" class="project-link">Repo or Live (add link when you have it)</a>
+        </p>
+      </article>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- EXPERIENCE SECTION                                           -->
+    <!-- Reusable experience entry layout. Skimmable.                 -->
+    <!-- ============================================================ -->
+    <section id="experience" class="page-section section-experience">
+      <h2 class="section-heading">Experience</h2>
+
+      <!-- Reusable experience entry: copy to add more roles. Use outcome language in bullets. -->
+      <article class="experience-entry">
+        <header class="experience-header">
+          <h3 class="experience-role">Replace with your role title</h3>
+          <p class="experience-org">Company or organisation name</p>
+          <p class="experience-date">Year or date range (e.g. 2023 – present)</p>
+        </header>
+        <p class="experience-description">
+          One or two sentences: what you owned or were responsible for. Not a job spec.
+        </p>
+        <ul class="experience-impact">
+          <li>Outcome bullet (e.g. Reduced X by Y%; shipped Z used by N teams).</li>
+          <li>Second outcome or achievement.</li>
+          <li>Third if relevant.</li>
+        </ul>
+      </article>
+
+      <!-- Second experience entry: same structure. -->
+      <article class="experience-entry">
+        <header class="experience-header">
+          <h3 class="experience-role">Replace with second role</h3>
+          <p class="experience-org">Organisation</p>
+          <p class="experience-date">Date range</p>
+        </header>
+        <p class="experience-description">
+          Short description of what you owned.
+        </p>
+        <ul class="experience-impact">
+          <li>Achievement or impact with outcome language.</li>
+          <li>Second achievement.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- CONTACT SECTION                                              -->
+    <!-- Simple: email, github, linkedin, CV. Easy to style later.   -->
+    <!-- ============================================================ -->
+    <section id="contact" class="page-section section-contact">
+      <h2 class="section-heading">Contact</h2>
+      <div class="contact-block">
+        <p class="contact-item"><strong>Email</strong> <a href="mailto:your@email.com">your@email.com</a> <em>(replace with your real email)</em></p>
+        <p class="contact-item"><strong>GitHub</strong> <a href="https://github.com/jonghunlee05">github.com/jonghunlee05</a></p>
+        <p class="contact-item"><strong>LinkedIn</strong> <a href="https://www.linkedin.com/in/jonghun-justin-lee">linkedin.com/in/jonghun-justin-lee</a></p>
+        <p class="contact-item"><strong>CV / Resume</strong> <a href="#">Add your CV link (PDF or Notion)</a></p>
+      </div>
+    </section>
   </main>
 
-  <!-- ========== INFO BAR: Intro text and social/cv links ========== -->
-  <section class="info-bar">
-    <p class="intro-text">
-      <!-- Short introduction paragraph will go here -->
-      Introduction text placeholder.
-    </p>
-    <nav class="info-links">
-      <a href="https://github.com/jonghunlee05">GitHub</a>
-      <a href="https://www.linkedin.com/in/jonghun-justin-lee">LinkedIn</a>
-      <a href="#">CV</a>
-    </nav>
-  </section>
-
-  <!-- ========== FOOTER ========== -->
+  <!-- ============================================================ -->
+  <!-- FOOTER (minimal; can add small print or badges later)         -->
+  <!-- ============================================================ -->
   <footer class="site-footer">
-    <p>Footer content</p>
+    <p>Site designed to look cheap. The rest isn't.</p>
   </footer>
 
   <script src="script.js"></script>
