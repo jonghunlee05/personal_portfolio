@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scroll for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Restrained base: black text, plenty of white space */
+body {
+  @apply bg-white text-neutral-900 antialiased;
+}
